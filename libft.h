@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 18:42:41 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:07:53 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@
 
 /* PART 1 */
 
-int		ft_isalpha(int c); /*ft_isascii-and-more.c*/
-int		ft_isdigit(int c); /*ft_isascii-and-more.c*/
-int		ft_isalnum(int c); /*ft_isascii-and-more.c*/
-int		ft_isascii(int c); /*ft_isascii-and-more.c*/
-int		ft_isprint(int c); /*ft_isascii-and-more.c*/
+int		ft_isalpha(int c); /*ft_isascii-more.c*/
+int		ft_isdigit(int c); /*ft_isascii-more.c*/
+int		ft_isalnum(int c); /*ft_isascii-more.c*/
+int		ft_isascii(int c); /*ft_isascii-more.c*/
+int		ft_isprint(int c); /*ft_isascii-more.c*/
 size_t	ft_strlen(const char *s); /*ft_strlen.c*/
-void	*ft_memset(void *b, int c, size_t len); /*ft_memset-and-bzero.c*/
-void	ft_bzero(void *s, size_t n); /*ft_memset-and-bzero.c*/
-void	*ft_memcpy(void *dst, const void *src, size_t n);/*ft_memcpy-and-memmo*/
-void	*ft_memmove(void *dst, const void *src, size_t len);/*ft_memcpy-and-mo*/
+void	*ft_memset(void *b, int c, size_t len); /*ft_memset-bzero.c*/
+void	ft_bzero(void *s, size_t n); /*ft_memset-bzero.c*/
+void	*ft_memcpy(void *dst, const void *src, size_t n);/*ft_memcpy-memmove.c*/
+void	*ft_memmove(void *dst, const void *src, size_t len);/*ft_memcpy-memmov*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
+int		ft_toupper(int c); /*ft_toupper-tolower.c*/
+int		ft_tolower(int c); /*ft_toupper-tolower.c*/
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
