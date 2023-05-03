@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 17:29:32 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:42:41 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int		ft_isprint(int c); /*ft_isascii-and-more.c*/
 size_t	ft_strlen(const char *s); /*ft_strlen.c*/
 void	*ft_memset(void *b, int c, size_t len); /*ft_memset-and-bzero.c*/
 void	ft_bzero(void *s, size_t n); /*ft_memset-and-bzero.c*/
-void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t n);/*ft_memcpy-and-memmo*/
+void	*ft_memmove(void *dst, const void *src, size_t len);/*ft_memcpy-and-mo*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
