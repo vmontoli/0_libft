@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 17:28:57 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:38:19 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*ptr;
 	unsigned char	fill;
 	size_t			i;
-	
+
 	ptr = (unsigned char *) b;
 	fill = (unsigned char) c;
 	i = 0;
