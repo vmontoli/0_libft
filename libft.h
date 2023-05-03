@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 14:11:57 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/03 17:29:32 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 
 /* PART 1 */
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *s, size_t n);
+int		ft_isalpha(int c); /*ft_isascii-and-more.c*/
+int		ft_isdigit(int c); /*ft_isascii-and-more.c*/
+int		ft_isalnum(int c); /*ft_isascii-and-more.c*/
+int		ft_isascii(int c); /*ft_isascii-and-more.c*/
+int		ft_isprint(int c); /*ft_isascii-and-more.c*/
+size_t	ft_strlen(const char *s); /*ft_strlen.c*/
+void	*ft_memset(void *b, int c, size_t len); /*ft_memset-and-bzero.c*/
+void	ft_bzero(void *s, size_t n); /*ft_memset-and-bzero.c*/
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
