@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 19:07:53 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:12:17 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 /* Definition of size_t (and NULL):
- * They are only variables and macros (not forbidden),
+ * There are only variables and macros (not forbidden),
  *  no external functions (forbidden) */
 # include <stddef.h>
 
