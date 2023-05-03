@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-<<<<<<< HEAD:ft_isascii-and-more.c
 /*   ft_isascii-and-more.c                              :+:      :+:    :+:   */
-=======
-/*   ft_is-characters.c                                 :+:      :+:    :+:   */
->>>>>>> a4be0084a916f262253c863c0c35a478631cf921:ft_is-characters.c
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:26:17 by vmontoli          #+#    #+#             */
-<<<<<<< HEAD:ft_isascii-and-more.c
-/*   Updated: 2023/05/03 16:37:44 by vmontoli         ###   ########.fr       */
-=======
-/*   Updated: 2023/05/03 16:26:40 by vmontoli         ###   ########.fr       */
->>>>>>> a4be0084a916f262253c863c0c35a478631cf921:ft_is-characters.c
+/*   Updated: 2023/05/03 17:04:47 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
