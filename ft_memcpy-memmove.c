@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:39:41 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 18:53:09 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/05 00:52:55 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*dst_curr;
 	char	*src_curr;
-	size_t	n_left;
+	size_t	bytes_copied;
 
 	dst_curr = (char *) dst;
 	src_curr = (char *) src;
-	n_left = n;
-	while (n_left > 0)
+	bytes_copied = 0;
+	while (bytes_copied < n)
 	{
-		*dst_curr++ = *src_curr++;
-		n_left--;
+		*(dst_curr++) = *(src_curr++);
+		bytes_copied++;
 	}
 	return (dst);
 }
@@ -33,15 +33,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*dst_curr;
 	char	*src_curr;
-	size_t	n_left;
+	size_t	bytes_copied;
 
 	dst_curr = (char *) dst;
 	src_curr = (char *) src;
-	n_left = len;
-	while (n_left > 0 && dst_curr != src && src_curr != dst)
+	bytes_copied = 0;
+	while (bytes_copied < len && dst_curr != src && src_curr != dst)
 	{
-		*dst_curr++ = *src_curr++;
-		n_left--;
+		*(dst_curr++) = *(src_curr++);
+		bytes_copied++;
 	}
 	return (dst);
 }
