@@ -1,34 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/09 16:59:13 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 20:09:55 by vmontoli         ###   ########.fr       */
+/*   Created: 2023/05/09 19:18:21 by vmontoli          #+#    #+#             */
+/*   Updated: 2023/05/09 19:58:14 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-static void	ft_putnbr_unsigned_fd(unsigned int n, int fd)
+static char	*ft_itoa_unsigned(unsigned int n, int pos)
 {
-	char	current;
+	char	*ptr;
 
 	if (n >= 10)
-		ft_putnbr_unsigned_fd((n / 10), fd);
-	current = (n % 10) + '0';
-	ft_putchar_fd(current, fd);
+		ptr = ft_itoa_unsigned(n / 10, pos + 1);
+	else
+	{
+		ptr = (char *) malloc(pos + 2);
+		if (ptr != NULL)
+			ptr[pos + 1] = '\0';
+	}
+	if (ptr != NULL)
+		ptr[pos] = (n % 10) + '0';
+	return (ptr);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_itoa(int n)
 {
+	char	*ptr;
+
 	if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_unsigned_fd((unsigned int) -n, fd);
+		ptr = ft_itoa_unsigned((unsigned int) -n, 1);
+		if (ptr != NULL)
+			ptr[0] = '-';
 	}
 	else
-		ft_putnbr_unsigned_fd((unsigned int) n, fd);
+		ptr = ft_itoa_unsigned((unsigned int) n, 0);
+	return (ptr);
 }

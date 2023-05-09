@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 18:43:33 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:09:01 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-/***/
+/*TODO*/
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -70,6 +70,7 @@ char	*ft_strdup(const char *s1);
 
 /* PART 2 */
 
+/*TODO*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -78,8 +79,12 @@ char	*ft_strtrim(char const *s1, char const *set);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 char	**ft_split(char const *s, char c);
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
+
+/*ft_itoa.c*/
 char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
+
+/*TODO*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 			/*with malloc() [#include <stdlib.h> on its file]*/
 

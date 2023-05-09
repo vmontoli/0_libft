@@ -6,7 +6,7 @@
 #    By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 11:49:16 by vmontoli          #+#    #+#              #
-#    Updated: 2023/05/09 19:14:44 by vmontoli         ###   ########.fr        #
+#    Updated: 2023/05/09 20:09:59 by vmontoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,11 @@ CFLAGS 				:= -Wall -Werror -Wextra
 ARFLAGS 			:= -crs
 
 .DELETE_ON_ERROR:
-.PHONY: all mandatory bonus clean fclean re
+.PHONY: all mandatory bonus clean fclean re $(NAME)
 
-$(NAME) all: mandatory
-
-mandatory: objs $(MANDATORY_OBJS)
+$(NAME) all mandatory: $(OUTPUT_FILE)
+	
+$(OUTPUT_FILE): objs $(MANDATORY_OBJS)
 	norminette $(MANDATORY_SRCS) $(MANDATORY_HEADERS)
 	ar $(ARFLAGS) $(OUTPUT_FILE) $(MANDATORY_OBJS)
 
