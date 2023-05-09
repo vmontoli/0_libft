@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/05 02:05:08 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:43:33 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@
  * There are only variables and macros (not forbidden),
  *  no external functions (forbidden) */
 # include <stddef.h>
+
+# include <stdbool.h>
+//# include <sys/errno.h>
+//EINVAL: Invalid argument
+//ENOMEM: Cannot allocate memory (from malloc())
 
 /* PART 1 */
 
@@ -54,8 +59,12 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+
+/*ft_calloc.c*/
 void	*ft_calloc(size_t count, size_t size);
 			/*with malloc() [#include <stdlib.h> on its file]*/
+
+/*ft_strdup.c*/
 char	*ft_strdup(const char *s1);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
@@ -73,14 +82,22 @@ char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 			/*with malloc() [#include <stdlib.h> on its file]*/
+
+/*ft_striteri.c*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/*ft_putstr-more.c*/
 void	ft_putchar_fd(char c, int fd);
 			/*with write() [#include <unistd.h> on its file]*/
 void	ft_putstr_fd(char *s, int fd);
 			/*with write() [#include <unistd.h> on its file]*/
 void	ft_putendl_fd(char *s, int fd);
 			/*with write() [#include <unistd.h> on its file]*/
+			/*ft_putchar_fd() used instead*/
+
+/*ft_putnbr.c*/
 void	ft_putnbr_fd(int n, int fd);
 			/*with write() [#include <unistd.h> on its file]*/
+			/*ft_putchar_fd() used instead*/
 
 #endif

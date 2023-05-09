@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset-bzero.c                                  :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:26:05 by vmontoli         ###   ########.fr       */
+/*   Created: 2023/05/09 15:09:53 by vmontoli          #+#    #+#             */
+/*   Updated: 2023/05/09 15:09:57 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char	*ptr;
-	unsigned char	fill;
-	size_t			i;
+	size_t	n_bytes;
+	char	*ptr;
 
-	if (b == NULL)
-		return (b);
-	ptr = (unsigned char *) b;
-	fill = (unsigned char) c;
-	i = 0;
-	while (i < len)
-		ptr[i++] = fill;
-	return (b);
-}
-
-void	ft_bero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
+	n_bytes = ft_strlen(s1) + 1;
+	ptr = (char *) malloc(n_bytes);
+	if (ptr != NULL)
+		ft_strlcpy(ptr, s1, n_bytes);
+	return (ptr);
 }

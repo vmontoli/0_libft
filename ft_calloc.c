@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset-bzero.c                                  :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:26:05 by vmontoli         ###   ########.fr       */
+/*   Created: 2023/05/09 14:55:24 by vmontoli          #+#    #+#             */
+/*   Updated: 2023/05/09 15:04:48 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*ptr;
-	unsigned char	fill;
-	size_t			i;
+	size_t	n_bytes;
+	void	*ptr;
 
-	if (b == NULL)
-		return (b);
-	ptr = (unsigned char *) b;
-	fill = (unsigned char) c;
-	i = 0;
-	while (i < len)
-		ptr[i++] = fill;
-	return (b);
-}
-
-void	ft_bero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
+	n_bytes = count * size;
+	ptr = malloc(n_bytes);
+	if (ptr != NULL)
+		ft_memset(ptr, 0, n_bytes);
+	return (ptr);
 }

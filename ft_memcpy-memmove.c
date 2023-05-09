@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:39:41 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/05 00:52:55 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:23:37 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*src_curr;
 	size_t	bytes_copied;
 
+	if (dst == NULL || src == NULL)
+		return (dst);
 	dst_curr = (char *) dst;
 	src_curr = (char *) src;
 	bytes_copied = 0;
@@ -35,6 +37,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*src_curr;
 	size_t	bytes_copied;
 
+	if (dst == NULL || src == NULL)
+		return (dst);
 	dst_curr = (char *) dst;
 	src_curr = (char *) src;
 	bytes_copied = 0;

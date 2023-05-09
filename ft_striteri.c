@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset-bzero.c                                  :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:26:05 by vmontoli         ###   ########.fr       */
+/*   Created: 2023/05/09 17:26:30 by vmontoli          #+#    #+#             */
+/*   Updated: 2023/05/09 18:43:27 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*ptr;
-	unsigned char	fill;
-	size_t			i;
+	size_t	i;
 
-	if (b == NULL)
-		return (b);
-	ptr = (unsigned char *) b;
-	fill = (unsigned char) c;
+	if (s == NULL || f == NULL)
+		return ;
 	i = 0;
-	while (i < len)
-		ptr[i++] = fill;
-	return (b);
-}
-
-void	ft_bero(void *s, size_t n)
-{
-	ft_memset(s, 0, n);
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

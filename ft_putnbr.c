@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset-bzero.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:26:05 by vmontoli         ###   ########.fr       */
+/*   Created: 2023/05/09 16:59:13 by vmontoli          #+#    #+#             */
+/*   Updated: 2023/05/09 18:44:45 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+static void	ft_putnbr_unsigned_fd(unsigned int n, int fd)
 {
-	unsigned char	*ptr;
-	unsigned char	fill;
-	size_t			i;
+	char	current;
 
-	if (b == NULL)
-		return (b);
-	ptr = (unsigned char *) b;
-	fill = (unsigned char) c;
-	i = 0;
-	while (i < len)
-		ptr[i++] = fill;
-	return (b);
+	current = (n % 10) + '0';
+	if (n >= 10)
+		ft_putnbr_unsigned_fd((n / 10), fd);
+	ft_putchar_fd(current, fd);
 }
 
-void	ft_bero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_memset(s, 0, n);
+	unsigned int	positive_n;
+
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		positive_n = (unsigned int) -n;
+	}
+	else
+		positive_n = (unsigned int) n;
+	ft_putnbr_unsigned_fd(positive_n, fd);
 }
