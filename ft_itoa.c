@@ -6,41 +6,56 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:18:21 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 19:58:14 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 05:40:57 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static char	*ft_itoa_unsigned(unsigned int n, int pos)
+static void	ft_itoa_fill_positive(unsigned int n, char *ptr, size_t pos)
 {
-	char	*ptr;
-
+	ptr[pos] = n % 10 + '0';
 	if (n >= 10)
-		ptr = ft_itoa_unsigned(n / 10, pos + 1);
-	else
+		ft_itoa_fill_positive(n / 10, ptr, pos - 1);
+}
+
+static size_t	ft_itoa_positive_len(unsigned int n)
+{
+	size_t	i;
+
+	i = 1;
+	while (n >= 10)
 	{
-		ptr = (char *) malloc(pos + 2);
-		if (ptr != NULL)
-			ptr[pos + 1] = '\0';
+		n /= 10;
+		i++;
 	}
-	if (ptr != NULL)
-		ptr[pos] = (n % 10) + '0';
-	return (ptr);
+	return (i);
+}
+
+static unsigned int	ft_unsigned_abs(int n)
+{
+	if (n < 0)
+		return ((unsigned int) -n);
+	return ((unsigned int) n);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*ptr;
+	bool			neg;
+	unsigned int	positive_n;
+	size_t			positive_len;
+	char			*ptr;
 
-	if (n < 0)
-	{
-		ptr = ft_itoa_unsigned((unsigned int) -n, 1);
-		if (ptr != NULL)
-			ptr[0] = '-';
-	}
-	else
-		ptr = ft_itoa_unsigned((unsigned int) n, 0);
+	neg = n < 0;
+	positive_n = ft_unsigned_abs(n);
+	positive_len = ft_itoa_positive_len(positive_n);
+	ptr = malloc(positive_len + neg + 1);
+	if (ptr == NULL)
+		return (NULL);
+	ptr[positive_len + neg] = '\0';
+	if (neg)
+		ptr[0] = '-';
+	ft_itoa_fill_positive(positive_n, ptr + neg, positive_len - 1);
 	return (ptr);
 }
