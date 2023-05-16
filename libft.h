@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 04:24:19 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 06:15:33 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,15 +95,15 @@ char	**ft_split(char const *s, char c);
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
 
 /*ft_itoa.c*/
+// w/ partial test PASSED
 char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
-/*TODO*/
+/*ft_striteri-strmapi.c*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 			/*with malloc() [#include <stdlib.h> on its file]*/
-
-/*ft_striteri.c*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+			/*ft_strdup() used instead*/
 
 /*ft_putstr-more.c*/
 void	ft_putchar_fd(char c, int fd);
