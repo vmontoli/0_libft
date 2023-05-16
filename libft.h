@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 03:13:10 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 04:24:19 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
  *  no external functions (forbidden) */
 # include <stddef.h>
 
+//Definition of bool (instead of _Bool), true, false)
 # include <stdbool.h>
 
 /*
@@ -29,13 +30,20 @@
 /* PART 1 */
 
 /*ft_isascii-more.c*/
+// w/ full test PASSED
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 
+/*ft_toupper-tolower.c*/
+// w/ full test PASSED
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
 /*ft_isupper-islower.c*/
+// w/ full test PASSED
 // added for convenience, used for ft_isascii() & ft_toupper/lower()
 int		ft_isupper(int c);
 int		ft_islower(int c);
@@ -54,10 +62,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 /*ft_strlcpy-stlcat.c*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-
-/*ft_toupper-tolower.c*/
-int		ft_toupper(int c);
-int		ft_tolower(int c);
 
 /*TODO*/
 char	*ft_strchr(const char *s, int c);
