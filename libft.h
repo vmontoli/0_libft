@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 20:28:50 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 02:20:01 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@
 # include <stddef.h>
 
 # include <stdbool.h>
-//# include <sys/errno.h>
-//EINVAL: Invalid argument
-//ENOMEM: Cannot allocate memory (from malloc())
+
+/*
+ * # include <sys/errno.h>
+ * //EINVAL: Invalid argument
+ * //ENOMEM: Cannot allocate memory (from malloc())
+*/
 
 /* PART 1 */
 
