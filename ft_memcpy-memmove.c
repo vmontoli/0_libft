@@ -6,12 +6,13 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:39:41 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:23:37 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 06:35:32 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*dst_curr;
@@ -29,6 +30,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		bytes_copied++;
 	}
 	return (dst);
+}
+*/
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
+{
+	return (ft_memmove(dst, src, n));
 }
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
