@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 02:20:01 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 03:13:10 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+
+/*ft_isupper-islower.c*/
+// added for convenience, used for ft_isascii() & ft_toupper/lower()
+int		ft_isupper(int c);
+int		ft_islower(int c);
 
 /*ft_strlen.c*/
 size_t	ft_strlen(const char *s);

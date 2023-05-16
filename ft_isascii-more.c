@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 16:26:17 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/03 18:52:49 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 03:11:29 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (ft_isupper(c) || ft_islower(c));
 }
 
 int	ft_isdigit(int c)
