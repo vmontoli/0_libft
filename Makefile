@@ -6,7 +6,7 @@
 #    By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 11:49:16 by vmontoli          #+#    #+#              #
-#    Updated: 2023/05/09 20:09:59 by vmontoli         ###   ########.fr        #
+#    Updated: 2023/05/16 02:17:50 by vmontoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,12 @@ OUTPUT_FILE			:= $(NAME).a
 
 OBJS_DIR			:= ./objs
 
+#TODO: Cambiar MANDATORY_SRCS a manuales para entregar
 MANDATORY_SRCS		:= $(filter-out $(wildcard *_bonus.c),$(wildcard *.c))
 MANDATORY_OBJS		:= $(MANDATORY_SRCS:%.c=$(OBJS_DIR)/%.o)
 MANDATORY_HEADERS	:= libft.h
 
+#TODO: Cambiar BONUS_SRCS a manuales para entregar
 BONUS_SCRS			:= $(wildcard *.c)
 BONUS_OBJS			:= $(BONUS_SCRS:%.c=$(OBJS_DIR)/%.o)
 BONUS_HEADERS		:= libft_bonus.h libft.h
