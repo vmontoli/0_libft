@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 07:42:49 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 08:06:32 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 
-/*TODO*/
+/*ft_strncmp-memcmp.c*/
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
-/*TODO*/
+/*ft_strnstr.c*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 /*ft_atoi.c*/
