@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 06:41:19 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 07:02:29 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,9 +82,10 @@ char	*ft_strdup(const char *s1);
 
 /* PART 2 */
 
-/*TODO*/
+/*ft_substr.c*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 			/*with malloc() [#include <stdlib.h> on its file]*/
+			/*ft_calloc() used instead*/
 
 /*TODO*/
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -107,7 +108,6 @@ char	*ft_itoa(int n);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 			/*with malloc() [#include <stdlib.h> on its file]*/
-			/*ft_strdup() used instead*/
 
 /*ft_putstr-more.c*/
 void	ft_putchar_fd(char c, int fd);
