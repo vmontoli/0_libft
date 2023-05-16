@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 06:29:10 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 06:41:19 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@
 
 //Definition of bool (instead of _Bool), true, false)
 # include <stdbool.h>
-
-/*
- * # include <sys/errno.h>
- * //EINVAL: Invalid argument
- * //ENOMEM: Cannot allocate memory (from malloc())
-*/
 
 /* PART 1 */
 
