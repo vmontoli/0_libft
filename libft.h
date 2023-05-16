@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 08:06:32 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/16 08:44:14 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,11 +87,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 			/*ft_calloc() used instead*/
 
-/*TODO*/
+/*ft_strjoin.c*/
 char	*ft_strjoin(char const *s1, char const *s2);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
-/*TODO*/
+/*ft_strtrim.c*/
 char	*ft_strtrim(char const *s1, char const *set);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
