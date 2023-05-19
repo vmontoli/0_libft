@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 22:32:34 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 22:58:22 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 # define stdin  0
 # define stdout 1
 # define stderr 2
-
 AAARRRGG norminette doesn't like this because lowercased (as on the stdio.h)
 */
 
@@ -80,6 +79,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 /*ft_atoi.c*/
+// manual partial test PASSED w/ ft_itoa
 int		ft_atoi(const char *str);
 
 /*ft_calloc.c*/
@@ -110,8 +110,7 @@ char	**ft_split(char const *s, char c);
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
 
 /*ft_itoa.c*/
-// manual partial test PASSED
-// TODO: reverse test with atoi
+// manual partial test PASSED w/ ft_atoi
 char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
