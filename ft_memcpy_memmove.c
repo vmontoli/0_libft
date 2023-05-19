@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:39:41 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 06:35:32 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 23:09:43 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*src_curr;
 	size_t	bytes_copied;
 
-	if (dst == NULL || src == NULL)
-		return (dst);
 	dst_curr = (char *) dst;
 	src_curr = (char *) src;
 	bytes_copied = 0;

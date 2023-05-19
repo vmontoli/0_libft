@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 08:07:49 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 08:13:01 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 23:12:24 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len2;
 	char	*result;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	result = (char *) malloc(len1 + len2 + 1);
