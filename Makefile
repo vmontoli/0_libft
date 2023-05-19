@@ -6,7 +6,7 @@
 #    By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 11:49:16 by vmontoli          #+#    #+#              #
-#    Updated: 2023/05/19 22:30:18 by vmontoli         ###   ########.fr        #
+#    Updated: 2023/05/19 22:33:19 by vmontoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,14 +34,14 @@ all: $(NAME)
 $(NAME): $(OBJS_DIR) $(MANDATORY_OBJS)
 	#TODO: eliminar norminette y echos para entregar
 	@echo $(MANDATORY_SRCS)
-	norminette $(MANDATORY_SRCS) $(MANDATORY_HEADERS)
+	norminette $(MANDATORY_SRCS) $(HEADER)
 	ar $(ARFLAGS) $(NAME) $(MANDATORY_OBJS)
 
 bonus: $(OBJS_DIR) $(BONUS_OBJS)
 	#TODO: eliminar norminette y echos para entregar
 	@echo $(MANDATORY_SRCS)
 	@echo $(filter $(wildcard *_bonus.c),$(BONUS_SRCS))
-	norminette $(BONUS_SRCS) $(BONUS_HEADERS)
+	norminette $(BONUS_SRCS) $(HEADER)
 	ar $(ARFLAGS) $(NAME) $(BONUS_OBJS)
 
 $(OBJS_DIR)/%.o: %.c
