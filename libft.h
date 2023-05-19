@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 21:51:32 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 21:58:52 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # define stdin  0
 # define stdout 1
 # define stderr 2
-
 
 /* PART 1 */
 
