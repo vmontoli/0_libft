@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:17:52 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/09 14:26:05 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 21:57:13 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-void	ft_bero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
