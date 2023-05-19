@@ -6,7 +6,7 @@
 #    By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 11:49:16 by vmontoli          #+#    #+#              #
-#    Updated: 2023/05/19 21:50:30 by vmontoli         ###   ########.fr        #
+#    Updated: 2023/05/19 22:23:05 by vmontoli         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ MANDATORY_SRCS		:= $(filter-out $(wildcard *_bonus.c),$(wildcard *.c))
 MANDATORY_OBJS		:= $(MANDATORY_SRCS:%.c=$(OBJS_DIR)/%.o)
 
 #TODO: Cambiar BONUS_SRCS a manuales para entregar (incluir Mandatory)
-BONUS_SCRS			:= $(wildcard *.c)
+BONUS_SRCS			:= $(wildcard *.c)
 BONUS_OBJS			:= $(BONUS_SCRS:%.c=$(OBJS_DIR)/%.o)
 
 CFLAGS 				:= -Wall -Werror -Wextra
