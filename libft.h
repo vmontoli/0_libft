@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 21:58:52 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/19 22:06:41 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,29 +21,33 @@
 //Definition of bool (instead of _Bool), true, false)
 # include <stdbool.h>
 
+/*
 //Definition of standard fd's; they are defined on <stdio.h> but has a lot of 
 // function definitions
 # define stdin  0
 # define stdout 1
 # define stderr 2
 
+AAARRRGG norminette doesn't like this because lowercased (as on the stdio.h)
+*/
+
 /* PART 1 */
 
-/*ft_isascii-more.c*/
-// w/ full test PASSED
+/*ft_isascii_more.c*/
+// manual full test PASSED
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 
-/*ft_toupper-tolower.c*/
-// w/ full test PASSED
+/*ft_toupper_tolower.c*/
+// manual full test PASSED
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-/*ft_isupper-islower.c*/
-// w/ full test PASSED
+/*ft_isupper_islower.c*/
+// manual full test PASSED
 // added for convenience, used for ft_isascii() & ft_toupper/lower()
 int		ft_isupper(int c);
 int		ft_islower(int c);
@@ -51,24 +55,24 @@ int		ft_islower(int c);
 /*ft_strlen.c*/
 size_t	ft_strlen(const char *s);
 
-/*ft_memset-bzero.c*/
+/*ft_memset_bzero.c*/
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 
-/*ft_memcpy-memmove.c*/
+/*ft_memcpy_memmove.c*/
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-/*ft_strlcpy-stlcat.c*/
+/*ft_strlcpy_stlcat.c*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-/*ft_strchr-memchr.c*/
+/*ft_strchr_memchr.c*/
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 
-/*ft_strncmp-memcmp.c*/
+/*ft_strncmp_memcmp.c*/
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
@@ -106,16 +110,17 @@ char	**ft_split(char const *s, char c);
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
 
 /*ft_itoa.c*/
-// w/ partial test PASSED
+// manual partial test PASSED
+// TODO: reverse test with atoi
 char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
-/*ft_striteri-strmapi.c*/
+/*ft_striteri_strmapi.c*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
-/*ft_putstr-more.c*/
+/*ft_putstr_more.c*/
 void	ft_putchar_fd(char c, int fd);
 			/*with write() [#include <unistd.h> on its file]*/
 void	ft_putstr_fd(char *s, int fd);
