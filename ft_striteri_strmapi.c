@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 17:26:30 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 23:12:03 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 04:36:46 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (result == NULL)
 		return (NULL);
 	i = 0;
-	while (i < (len - 1))
+	while (i < len)
 	{
 		result[i] = f(i, s[i]);
 		i++;
 	}
-	result[len - 1] = '\0';
+	result[len] = '\0';
 	return (result);
 }
