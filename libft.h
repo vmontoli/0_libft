@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/20 18:29:31 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 20:34:14 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,14 +150,27 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+/*ft_lstnew_bonus.c*/
 t_list	*ft_lstnew(void *content);
+			/*with malloc() [#include <stdlib.h> on its file]*/
+
+/*ft_lstadd_front_bonus.c*/
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/*ft_lstsize_last_back_bonus.c*/
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/*t_lstdelone_clear_iter_bonus.c*/
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+			/*with free() [#include <stdlib.h> on its file]*/
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+			/*with free() [#include <stdlib.h> on its file]*/
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+/*TODO*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+			/*with malloc() & free() [#include <stdlib.h> on its file]*/
 
 #endif
