@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/20 18:18:52 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:29:31 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,10 @@ char	*ft_strjoin(char const *s1, char const *s2);
 /*ft_strtrim.c*/
 char	*ft_strtrim(char const *s1, char const *set);
 			/*with malloc() [#include <stdlib.h> on its file]*/
+
+/*ft_char_is_in_str.c*/
+// useful for ft_strtrim()
+bool	ft_char_is_in_str(char c, const char *s);
 
 /*ft_split.c*/
 char	**ft_split(char const *s, char c);

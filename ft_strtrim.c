@@ -6,23 +6,12 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 08:15:41 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 23:45:17 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:29:08 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-
-static bool	ft_char_is_in_str(char c, const char *s)
-{
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return (true);
-		s++;
-	}
-	return (false);
-}
 
 static char	*ft_strtrim_left(char const *s1, char const *set)
 {
