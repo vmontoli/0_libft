@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 07:05:17 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 07:39:51 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 04:10:37 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*current;
 	char	tofind;
 
-	current = (char *) s + ft_strlen(s) + 1;
+	current = (char *) s + ft_strlen(s);
 	tofind = (char) c;
 	if (tofind == '\0')
 		return (current);
