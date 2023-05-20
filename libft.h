@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/20 04:00:02 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:18:52 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-/*size_t_max_min.c*/
+/*ft_size_t_max_min.c*/
 //helper function for ft_strlcat
-size_t	size_t_max(size_t a, size_t b);
-size_t	size_t_min(size_t a, size_t b);
+size_t	ft_size_t_max(size_t a, size_t b);
+size_t	ft_size_t_min(size_t a, size_t b);
 
 /*ft_strchr_memchr.c*/
 char	*ft_strchr(const char *s, int c);

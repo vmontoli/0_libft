@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 06:43:42 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/20 04:29:24 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:19:38 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_strdup(""));
-	dstsize = size_t_min(s_len - start, len) + 1;
+	dstsize = ft_size_t_min(s_len - start, len) + 1;
 	result = (char *) ft_calloc(dstsize, sizeof(char));
 	if (result == NULL)
 		return (NULL);
