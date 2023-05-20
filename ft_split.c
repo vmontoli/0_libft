@@ -6,14 +6,14 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 08:44:44 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/16 11:24:59 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 19:36:39 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_split_count_substrings(char const *s, char c)
+static size_t	ft_split_count_substrings(char const *s, char c)
 {
 	size_t	result;
 
@@ -30,7 +30,7 @@ size_t	ft_split_count_substrings(char const *s, char c)
 	return (result);
 }
 
-char	*ft_split_create_substring(char **current_ptr, char c)
+static char	*ft_split_create_substring(char **current_ptr, char c)
 {
 	char	*s;
 	char	*start_substring;
@@ -49,6 +49,17 @@ char	*ft_split_create_substring(char **current_ptr, char c)
 	return (ft_substr(start_substring, 0, n_chars_substring));
 }
 
+static char	**ft_split_recursive_free(char **to_delete)
+{
+	size_t	i;
+
+	i = 0;
+	while (to_delete[i] != NULL)
+		free(to_delete[i++]);
+	free(to_delete);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	n_substrings;
@@ -63,6 +74,11 @@ char	**ft_split(char const *s, char c)
 	current_ptr = (char **) &s;
 	i = 0;
 	while (i < n_substrings)
-		result[i++] = ft_split_create_substring(current_ptr, c);
+	{
+		result[i] = ft_split_create_substring(current_ptr, c);
+		if (result[i] == NULL)
+			return (ft_split_recursive_free(result));
+		i++;
+	}
 	return (result);
 }
