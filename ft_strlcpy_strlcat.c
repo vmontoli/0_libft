@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 01:44:28 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/19 23:13:05 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/20 04:04:15 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	while (i < dstsize)
-		dst[i++] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }
 
@@ -33,6 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_orig_len;
 	size_t	src_orig_len;
+	size_t	dst_def_len;
 
 	dst_orig_len = ft_strlen(dst);
 	if (dstsize > 0 && dstsize >= dst_orig_len)
@@ -40,5 +40,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 				&(dst[dst_orig_len]), src, (dstsize - dst_orig_len));
 	else
 		src_orig_len = ft_strlen(src);
-	return (dst_orig_len + src_orig_len);
+	dst_def_len = size_t_min(dstsize, dst_orig_len);
+	return (dst_def_len + src_orig_len);
 }
