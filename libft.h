@@ -6,7 +6,7 @@
 /*   By: vmontoli <vmontoli@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:21:57 by vmontoli          #+#    #+#             */
-/*   Updated: 2023/05/20 20:34:14 by vmontoli         ###   ########.fr       */
+/*   Updated: 2023/05/21 01:45:31 by vmontoli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ AAARRRGG norminette doesn't like this because lowercased (as on the stdio.h)
 /* PART 1 */
 
 /*ft_isascii_more.c*/
-// manual full test PASSED
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -41,12 +40,10 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 /*ft_toupper_tolower.c*/
-// manual full test PASSED
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
 /*ft_isupper_islower.c*/
-// manual full test PASSED
 // added for convenience, used for ft_isascii() & ft_toupper/lower()
 int		ft_isupper(int c);
 int		ft_islower(int c);
@@ -84,7 +81,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 /*ft_atoi.c*/
-// manual partial test PASSED w/ ft_itoa
 int		ft_atoi(const char *str);
 
 /*ft_calloc.c*/
@@ -119,7 +115,6 @@ char	**ft_split(char const *s, char c);
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
 
 /*ft_itoa.c*/
-// manual partial test PASSED w/ ft_atoi
 char	*ft_itoa(int n);
 			/*with malloc() [#include <stdlib.h> on its file]*/
 
@@ -169,8 +164,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 			/*with free() [#include <stdlib.h> on its file]*/
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
-/*TODO*/
+/*ft_lstmap.c*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 			/*with malloc() & free() [#include <stdlib.h> on its file]*/
+			/*used ft_lstnew() & ft_lstclear() instead*/
 
 #endif
